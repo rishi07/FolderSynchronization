@@ -19,7 +19,7 @@ source = "/home/rishi_07/Documents/"
 #Iterating for each file-type
 for filetype in file_types:
     
-	#Extracting the extension of the file-type
+    #Extracting the extension of the file-type
     ext = " ".join(re.findall("['a-zA-Z0-9]+",filetype))
     
     #Creating the destination link
