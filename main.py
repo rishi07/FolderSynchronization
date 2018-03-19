@@ -1,7 +1,7 @@
-"""
-Author:	Saptarshi Dey
-	National Institute of Technology, Durgapur
-"""
+
+'''
+Author: Saptarshi Dey
+'''
 
 import glob
 import shutil
@@ -13,17 +13,17 @@ import re
 file_types = ["*.pdf", "*.mp3", "*.docx", "*.txt", "*.odt", "*.mp4", "*.zip", "*.ppt", "*.jpg", "*.jpeg", "*.ipynb"]
 
 #Our source folder which needs to be synchronized.
-source = "/home/rishi_07/Documents/"
-
-
+source = "/home/rishi_07/Desktop/"
+dest = "/home/rishi_07/Documents/"
+	
 #Iterating for each file-type
 for filetype in file_types:
-    
+    		
     #Extracting the extension of the file-type
     ext = " ".join(re.findall("['a-zA-Z0-9]+",filetype))
     
     #Creating the destination link
-    destination = source + ext.upper()
+    destination = dest + ext.upper()
     
     #If the folder is already created do nothing else creating it
     if not os.path.exists(destination):
