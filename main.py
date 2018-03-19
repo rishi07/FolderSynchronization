@@ -1,6 +1,6 @@
 """
 Author:	Saptarshi Dey
-		National Institute of Technology, Durgapur
+	National Institute of Technology, Durgapur
 """
 
 import glob
