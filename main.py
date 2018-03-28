@@ -28,10 +28,6 @@ for filetype in file_types:
     #Creating the destination link
     destination = dest + ext.upper()
     
-    #If the folder is already created do nothing else creating it
-    if not os.path.exists(destination):
-        os.makedirs(destination)
-
     #Now trying the match the extension of each file-type with the list of available files using the glob library
     for filename in glob.glob(source + filetype):
         
@@ -41,9 +37,12 @@ for filetype in file_types:
         temp = temp.split('/')
         name = name + "/"+temp[-1]
 
+        #If the folder is already created do nothing else creating it
+        if not os.path.exists(destination):
+            os.makedirs(destination)
+
         #If the file is already present in the destination just remove the file from the source else moving it
         if not os.path.isfile(name):
             shutil.move(filename,destination)
         else:
             os.remove(filename)
-
