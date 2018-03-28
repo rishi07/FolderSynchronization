@@ -7,14 +7,17 @@ import glob
 import shutil
 import os
 import re
-
+import getpass
 
 #list of file types to sort-out. May add new file types.
 file_types = ["*.pdf", "*.mp3", "*.docx", "*.txt", "*.odt", "*.mp4", "*.zip", "*.ppt", "*.jpg", "*.jpeg", "*.ipynb"]
 
+# Get username
+user_name = str(getpass.getuser())
+
 #Our source folder which needs to be synchronized.
-source = "/home/rishi_07/Desktop/"
-dest = "/home/rishi_07/Documents/"
+source = "/home/"+user_name+"/Desktop/"
+dest = "/home/"+user_name+"/Documents/"
 	
 #Iterating for each file-type
 for filetype in file_types:
