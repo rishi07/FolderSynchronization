@@ -10,7 +10,7 @@ import re
 import getpass
 
 #list of file types to sort-out. May add new file types.
-file_types = ["*.pdf", "*.mp3", "*.docx", "*.txt", "*.odt", "*.mp4", "*.zip", "*.ppt", "*.jpg", "*.jpeg", "*.ipynb"]
+file_types = ["*.pdf", "*.mp3", "*.docx", "*.txt", "*.odt", "*.mp4", "*.zip", "*.ppt", "*.jpg", "*.jpeg", "*.ipynb","*.xlsx","*.doc","*.png","*.rar","*.kml","*.xcf","*.html","*.gz","*.JPG","*.pptx"]
 
 # Get username
 user_name = str(getpass.getuser())
